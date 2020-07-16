@@ -1,12 +1,85 @@
 <html>
 
+<!-- 
+  Hoy aprendimos nuevas etiquetas de HTML. Entre ellas, lo que estoy usando aca: comentarios!
+  Esto no se ve en la web, sirve para dejar anotaciones en mi codigo.
+
+  Vimos tres etiquetas:
+  <br/> -> deja un espacio
+  <hr/> -> hace una linea divisoria
+  <img/> -> permite agregar imagenes. 
+  Estas etiquetas no se abren y se cierran como las demas: se pone una sola, con / antes del signo >
+
+  Para agregar imagenes debemos poner un atributo src con la ruta de la imagen. 
+
+  Las rutas pueden ser absolutas o relativas, de una web o de mi pc. 
+  Para trabajar con imagenes de mi pc preferimos siempre usar rutas relativas. 
+
+  Si la imagen esta *en la misma carpeta* que mi html, escribimos solo el nombre de la imagen, asi:
+  <img src="imagen.png"/> -> atencion, la extension puede ser .png, .jpg, .jpeg, .gif, chequeen que sea la correcta
+
+  Si la imagen esta *una carpeta mas arriba* escribimos ../imagen.png 
+  Si la imagen esta en una carpeta adentro de la carpeta de mi html, necesitamos saber el nombre de la carpeta
+  Por ejemplo, si la carpeta se llama "imagenes", escribimos: ./imagenes/imagen.png 
+
+  Vimos tambien como agregar estilos a mi html. 
+
+  Hay tres maneras
+
+  *Estilos en linea*
+  Usamos el atributo "style" dentro de la etiqueta HTML. Asi:
+  <h1 style="color:red">Titulo</h1>
+
+  *CSS en HTML*
+  Dentro de la etiqueta <head> escribimos la etiqueta <style> y dentro de ella, el css
+  Asi:
+
+  <style>
+    h1 {
+      color: red;
+    }
+  </style>
+
+  *CSS en un archivo aparte* 
+  Creamos un archivo css. Por ejemplo, style.css y lo guardamos en la misma carpeta que el html
+  Dentro de la etiqueta <head> escribimos
+  <link rel="stylesheet" href="style.css">
+
+  En el archivo css, agregamos los estilos
+
+  h1 {
+    color: red;
+  }
+
+  Vimos tambien que podemos agregar clases a los elementos para identificarlos
+  Los nombres de clases los elegimos nosotras. 
+  Por ejemplo, puedo ponerle a varios elementos la clase "misegundaclase", asi:
+  <h1 class="misegundaclase">Titulo</h1>
+
+  En mi css, identifico a las clases con un punto antes de su nombre
+  Asi:
+
+  .misegundaclase {
+    color: blue;
+  }
+
+  Por ultimo, vimos cuatro maneras de poner colores en css
+  color: red;
+  color: #FF0000;
+  color: rgb(255, 0, 0);
+  color: rgba(255, 0, 0, 0);
+
+  Todas son maneras de llamar al mismo color: rojo. 
+-->
 <head>
   <title>Clase 2</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Brecha digital de género</h1>
-  <p>
+  <h1 class="miprimeraclase">Brecha digital de género</h1>
+  <hr/>
+  <p class="miprimeraclase">
     La brecha digital de género es una de las variables más relevantes relacionadas con el retraso de las
     <a href="https://es.wikipedia.org/wiki/Mujer">mujeres</a> en la incorporación al mundo de las nuevas tecnologías y
     al uso de
@@ -14,7 +87,22 @@
     dan en todas las sociedades actuales,
     tanto en contextos de economías avanzadas como de economías en desarrollo.
   </p>
+  <!-- Esto es un comentario. 
+  
+    Sirve para dejarme anotaciones y que no se vean en la web. 
 
+    RUTAS RELATIVAS:
+    Si el archivo que quiero poner esta en la misma carpeta que mi html, escribo solo su nombre
+    Si el archivo esta una carpeta mas arriba, escribo ../nombreDelArchivo.png
+    Si el archivo esta dos carpetas mas arribas, escribo ../../nombreDelArchivo.png
+    Si el archivo esta en una carpeta dentro de la carpeta de mi html, escribo ./nombreDeLaCarpeta/nombreDelArchivo.png
+  
+  -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/RAAF_airman_in_a_C-130J_at_Red_Flag_15-1.JPG/220px-RAAF_airman_in_a_C-130J_at_Red_Flag_15-1.JPG"/>
+  
+  <!-- La siguiente imagen no va a funcionar en su comptadora porque ustedes no la tienen. 
+  Elijan una que si tengan!  -->
+  <img src="alien rosa.png"/>
   <h4>Índice</h4>
   <ol>
     <li>Concepto</li>
@@ -32,11 +120,11 @@
   </ol>
 
   <h2>Concepto</h2>
-  <p>
+  <p class="miprimeraclase">
     Brecha digital es la disparidad existente entre individuos, hogares, empresas y áreas geográficas de diferentes
     niveles socio-económicos en relación tanto
     a las oportunidades de acceso a las tecnologías de información y comunicación como al uso de éstas para una amplia
-    variedad de actividades. Son
+    variedad de actividades. <br/> Son
     capacidades para adquirir destrezas prácticas en TIC necesarias para el trabajo y la vida cotidiana. La brecha
     digital está relacionada con la brecha del
     conocimiento y, más específicamente, con las “habilidades digitales”2​ necesarias para vivir y trabajar en
@@ -50,7 +138,6 @@
     pero va aumentando con la edad,
     llegando a ser diez puntos inferior en las mujeres en el tramo de edad de 65 a 74 años.3
   </p>
-
   <h2>Mujeres y proyectos TIC</h2>
   <p>
     A pesar de la discriminación hacia la mujer en las TICs a lo largo de la historia, existen numerosas aportaciones
@@ -58,7 +145,7 @@
     los trabajos más influyentes realizados por mujeres:
   </p>
 
-  <ul>
+  <ul class="miprimeraclase">
     <li>Grace Hopper: inventó el primer compilador de la historia, el A-0.</li>
     <li>Ada Lovelace: publicó el primer algoritmo diseñado para ser ejecutado por una computadora, cuando estas todavía
       no se habían implementado.</li>
