@@ -1,6 +1,7 @@
 # Clase 2 - Ada 5ta Online
 
-Para esta clase usaremos el archivo HTML que se encuentra [aquí](https://github.com/malerey/Clase-2/blob/master/clase2.html). 
+Pueden ver aqui tanto el archivo CSS como HTML que usamos hoy. 
+El archivo HTML tiene comentarios con todo lo que aprendimos. 
 
 Les recomiendo que vayan armando una carpeta para organizar los archivos de Ada en su computadora. 
 - En su escritorio o en Documentos, hagan una nueva carpeta que se llame "Ada"
